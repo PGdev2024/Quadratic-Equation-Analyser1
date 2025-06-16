@@ -22,18 +22,18 @@ class Analyser:
    def roots(self):
       D=self.b**2 - 4*self.a*self.c
       if D>0:
-        x1=(-self.b+math.sqrt(D))/self.a*2
-        x2=(-self.b-math.sqrt(D))/self.a*2
+        x1=(-self.b+math.sqrt(D))/(self.a*2)
+        x2=(-self.b-math.sqrt(D))/(self.a*2)
         if math.sqrt(D)==math.isqrt(D):
            return "The roots are real and rational",x1,x2
         else:
            return "The roots are real and irrational",x1,x2
       if D<0:
-         x1=str(-self.b/self.a*2)+"+"+str(math.sqrt(-D)/self.a*2)+"i"
-         x2=str(-self.b/self.a*2)+"-"+str(math.sqrt(-D)/self.a*2)+"i"
+         x1=str(-self.b/(self.a*2))+"+"+str(math.sqrt(-D)/(self.a*2))+"i"
+         x2=str(-self.b/(self.a*2))+"-"+str(math.sqrt(-D)/(self.a*2))+"i"
          return "The roots are complex and conjugates of each other",x1,x2
       if D==0:
-         root=-self.b/self.a*2,2
+         root=-self.b/(self.a*2)
          return "There is a single repeated root",root
    def intercept(self):
       ic=self.c
