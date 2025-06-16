@@ -16,8 +16,8 @@ class Analyser:
       if D == 0:
          return D,"Discriminant is zero"
    def vertex(self):
-      Vx=-self.b/(self.a*2)
-      Vy=-(self.b**2 - 4*self.a*self.c)/self.a*4
+      Vx=(-self.b)/(self.a*2)
+      Vy=-(self.b**2 - 4*self.a*self.c)/(self.a*4)
       return Vx,Vy
    def roots(self):
       D=self.b**2 - 4*self.a*self.c
@@ -33,7 +33,7 @@ class Analyser:
          x2=str(-self.b/(self.a*2))+"-"+str(math.sqrt(-D)/(self.a*2))+"i"
          return "The roots are complex and conjugates of each other",x1,x2
       if D==0:
-         root=-self.b/(self.a*2)
+         root=-(self.b)/(self.a*2)
          return "There is a single repeated root",root
    def intercept(self):
       ic=self.c
